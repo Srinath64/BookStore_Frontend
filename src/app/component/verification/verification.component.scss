@@ -1,19 +1,28 @@
 .card {
-    width: 350px;
-    padding: 10px;
-    border-radius: 20px;
-    background: #fff;
-    border: none;
-    height: 350px;
-    position: relative
+    border: solid black 1px;
+    text-align: center;
+    background: white;
 }
 
 .container {
-    height: 100vh
+    border: solid black 1px;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 20%;
 }
 
-body {
-    background: #eee
+
+.head{
+    font-family: emoji;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.otp{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .mobile-text {
@@ -22,17 +31,18 @@ body {
 }
 
 .form-control {
-    margin-right: 12px
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
 }
 
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #ff8880;
-    outline: 0;
-    box-shadow: none
 }
 
 .cursor {
-    cursor: pointer
+    cursor: pointer;
+    margin-left: 10px;
 }

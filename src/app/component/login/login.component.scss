@@ -3,7 +3,7 @@
   }
 
   .example-container{
-    margin-left: 12%;
+    margin-left: 23%;
   }
 
   .example-right-align {
@@ -33,14 +33,33 @@
 }
 
 .container{
-  margin-top: 1%;
+  margin-top: 13%;
   width: 60%;
-  border: rgb(155, 147, 147) solid 1px;
+  border: #9b9393 solid 1px;
   border-radius: 10px;
+  margin-left: 19%;
 }
 
 body {
   margin: 0;
   height: 100%;
   background-color: #f7f7f7;
+}
+
+.head-text{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: emoji;
+  margin-left: 40%;
+}
+
+.login-button{
+  width: 67%;
+  height: 45px;
+  background: #A03037;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }

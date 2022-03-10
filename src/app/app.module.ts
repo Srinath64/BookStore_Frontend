@@ -19,6 +19,7 @@ import { VerificationComponent } from './component/verification/verification.com
 import { FormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { HomeComponent } from './component/home/home.component';
+import { CartComponent } from './component/cart/cart.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HomeComponent } from './component/home/home.component';
     RegisterComponent,
     LoginComponent,
     VerificationComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,47 @@
-<p>home works!</p>
+<header>
+    <div class="navbar">
+        <img src="/assets/education.svg" style="margin-left: 30px;">
+        <a class="active" href="#">BOOK STORE</a>
+      </div>
+</header> 
+
+<div class="container" >
+  <div class="header">
+    <label class="header-text">Books</label ><br>
+    <span class="header-total">({{books.length}} Items)</span>
+    <div class="dropdown">
+      <!-- <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort by relevance
+      </button> -->
+      <div aria-labelledby="dropdownMenu2">
+        <button class="sort" type="button" (click)="Onsort(1)">Price: High to Low</button>
+        <button class="sort" type="button" (click)="Onsort(2)">Price: Low to High </button>
+        <button class="sort" type="button" (click)="Onsort(3)">Newest Arival</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row1">
+    <br style="margin-left: 30px;">
+    <div class="card" *ngFor = "let book of books">
+      <img class="card-img-top" src={{book.logo}} alt="Card image cap">
+      <div class="card-body">
+          <span class="card-title">{{book.name}}</span>
+          <h3 class="card-subtitle mb-2 text-muted">{{book.author}}</h3>
+          <h6  *ngIf="book.quantity == 0; else logged" style="color: red;"><b>{{sold}}</b></h6>
+          <ng-template #logged>
+          </ng-template>
+        <p class="card-price"><b>Rs. {{book.price}}</b></p>
+        
+        <div *ngIf = "!bookIdLIst.includes(book.book_id) && book.quantity != 0; else loggedOut" >
+          <button class="cart" (click) = "addToCart(book.book_id)" >ADD TO CART</button>
+          <button class="wishlist">WISHLIST</button>
+        </div>
+        <ng-template #loggedOut>
+          <button *ngIf="book.quantity != 0;" class="card-link btn btn-primary btn-sm cart">ADDED TO BAG</button>
+        </ng-template>
+        <button *ngIf="book.quantity == 0;" style="background-color: white; color: black; width: 90%; border:black 1px solid;" class="card-link btn btn-primary btn-sm">WISHLIST</button>
+      </div>
+    </div>
+  </div> 
+</div>
