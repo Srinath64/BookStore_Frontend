@@ -40,7 +40,7 @@
         <ng-template #loggedOut>
           <button *ngIf="book.quantity != 0;" class="card-link btn btn-primary btn-sm cart">ADDED TO BAG</button>
         </ng-template>
-        <button *ngIf="book.quantity == 0;" style="background-color: white; color: black; width: 90%; border:black 1px solid;" class="card-link btn btn-primary btn-sm">WISHLIST</button>
+        <button *ngIf="book.quantity == 0;" class="card-link btn btn-primary btn-sm cart">ADD TO WISHLIST</button>
       </div>
     </div>
   </div> 

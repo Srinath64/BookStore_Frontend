@@ -50,3 +50,20 @@
     height: 21px;
     background-image: url("/src/assets/supermarket.svg")
 }
+
+.navbar {
+    width: 100%;
+    background-color: #A03037;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: emoji;
+  }

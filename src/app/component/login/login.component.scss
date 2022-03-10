@@ -33,9 +33,9 @@
 }
 
 .container{
-  margin-top: 13%;
+  margin-top: 11%;
   width: 60%;
-  border: #9b9393 solid 1px;
+  border: #A03037 solid 1px;
   border-radius: 10px;
   margin-left: 19%;
 }
@@ -52,6 +52,7 @@ body {
   font-weight: 600;
   font-family: emoji;
   margin-left: 40%;
+  color: #A03037;
 }
 
 .login-button{
@@ -62,4 +63,21 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #A03037;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: emoji;
 }
