@@ -8,7 +8,8 @@ import { RegisterComponent } from './component/register/register.component';
 import { VerificationComponent } from './component/verification/verification.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo:'login', pathMatch:'full'},
+  {path: 'login' , component: LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},

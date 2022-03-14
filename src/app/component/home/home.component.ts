@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       })
     }else{
       this.getBookIdLIst()
-      this.backToLOginPage();
+      // this.backToLOginPage();
       this.reloadData();
     }
    
@@ -53,10 +53,11 @@ export class HomeComponent implements OnInit {
 
   backToLOginPage(){
     const token = localStorage.getItem("token");
-    if(token == null){
-      this.router.navigate(['']);
+    // if(token == null){
+    //   this.router.navigate(['login']);
       
-    } 
+    // } 
+    this.router.navigateByUrl('/login');
   }
 
   Onsort(num:number){

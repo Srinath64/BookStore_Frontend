@@ -5,6 +5,7 @@
         <a class="active" href="#">BOOK STORE</a>
         <i class="fa cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active">&#xf07a;</i>
         <span class='badge badge-warning' id='lblCartCount'>{{bookIdLIst.length}}</span>
+        <i class="fa fa-sign-out logout" aria-hidden="true" (click)="backToLOginPage()"></i>
     </div>
 </header> 
 
@@ -12,14 +13,22 @@
   <div class="header">
     <label class="header-text">Books</label ><br>
     <span class="header-total">({{books.length}} Items)</span>
-    <div class="dropdown">
-      <!-- <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <!-- <div class="dropdown">
+      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sort by relevance
-      </button> -->
+      </button>
       <div aria-labelledby="dropdownMenu2">
         <button class="sort" type="button" (click)="Onsort(1)">Price: High to Low</button>
-        <button class="sort" type="button" (click)="Onsort(2)">Price: Low to High </button>
+        <button class="sort" type="button" (click)="Onsort(2)">Price: High to Low </button>
         <button class="sort" type="button" (click)="Onsort(3)">Newest Arival</button>
+      </div>
+    </div> -->
+    <div class="dropdown">
+      <button class="dropbtn">Sort By Relevance</button>
+      <div class="dropdown-content">
+        <a (click)="Onsort(1)">Price: High to Low</a>
+        <a (click)="Onsort(2)">Price: Low to High</a>
+        <a (click)="Onsort(3)">Newest Arival</a>
       </div>
     </div>
   </div>

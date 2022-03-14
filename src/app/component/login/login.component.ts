@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
   
   ngOnInit(): void {
     const token = localStorage.getItem("token");
-    if(token != null){
-      this.router.navigate(['home']);
-    }
+    // if(token != null){
+    //   this.router.navigate(['home']);
+    // }
     this.initForm();
   }
 
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         }else{
           alert("Wrong Email Id or PassWord")
         }
-        this.router.navigate(['home']);
+        this.router.navigate(['/home']);
       });  
   }
 
