@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <header>
     <div class="navbar">
         <img src="/assets/education.svg" style="margin-left: 30px;">
         <a class="active" href="#">BOOK STORE</a>
-      </div>
+        <i class="fa cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active">&#xf07a;</i>
+        <span class='badge badge-warning' id='lblCartCount'>{{bookIdLIst.length}}</span>
+    </div>
 </header> 
 
 <div class="container" >

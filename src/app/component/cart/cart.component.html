@@ -5,8 +5,8 @@
       <a class="active" href="#">BOOK STORE</a>
     </div>
 </header> 
-<h1 style="margin-left: 187px;">MyCart ({{bookIdLIst.length}})</h1>
-<div class="container" >
+<h1 class="cart-head">MyCart ({{bookIdLIst.length}})</h1>
+<div class="container">
   <div style="margin-left: 20px;" *ngFor = "let item of carts"><br>
     
     <div class="main-content">
@@ -14,31 +14,27 @@
             <img class="logo" src = {{item.book.logo}}>
         </div>
         
-        <div style="margin-left: 30px;">
-            <span >{{item.book.name}}</span>
-            <h6>{{item.book.author}}</h6>
-           
-
-            <p class="card-text" style="color: black;"><b>Rs.{{item.book.price}}</b></p>
+        <div style="margin-left: 30px; margin-top: 17px;">
+            <span class="book-name">{{item.book.name}}</span>
+            <h6 class="book-author">{{item.book.author}}</h6>
+            <p class="book-price">Rs.{{item.book.price}}</p>
             <div>
-                <button class="bt" type="button" (click)="minus(item.cart_id, item.quantity, item.book.book_id)" ><i class = "fa fa-minus"></i> </button>
-                <input style="width: 20px;" type="text" [value] = "item.quantity">
-    
-               
-                <button class="bt" type="button" (click)="plus(item.cart_id, item.quantity, item.book.book_id)"><i class = "fa fa-plus"></i> </button>
-                <a style="margin-left: 30px;" (click) = "onRemove(item.cart_id)">Remove</a>
+                <button class="bt" type="button" (click)="minus(item.cart_id, item.quantity, item.book.book_id)" style="margin-right: 5px;" ><i class = "fa fa-minus"></i> </button>
+                <input style="width: 20px; text-align: center;" type="text" [value] = "item.quantity">
+                <button class="bt" type="button" (click)="plus(item.cart_id, item.quantity, item.book.book_id)" style="margin-left: 5px;"><i class = "fa fa-plus"></i> </button>
+                <a style="margin-left: 30px; cursor: pointer;" (click) = "onRemove(item.cart_id)">Remove</a>
             </div>
         </div>
     </div>
   </div>
-  <button style="margin-left: 60%;" *ngIf = "!custDetails && bookIdLIst.length" (click)= onPlaceOrder(); class="btn btn-primary btn-sm" >PLace Order</button><br><br>
+  <button *ngIf = "!custDetails && bookIdLIst.length" (click)= onPlaceOrder(); class="btn btn-primary btn-sm order" >PLACE ORDER</button><br><br>
 </div>
 
 
 <div class="container"><br>
   <div style="margin-left: 20px;">
     <div style="display: flex;">
-  <h1>Customer Details</h1>
+  <h1 class="sub-head">CUSTOMER DETAILS</h1>
   <h3 style="margin-left: 80%;" *ngIf="checkout">Edit</h3>
 </div>
 
@@ -76,7 +72,7 @@
   </div>
   <div >
     <mat-form-field appearance="outline">
-      <mat-label>city/town</mat-label>
+      <mat-label>City/Town</mat-label>
       <input  matInput placeholder="city/town"  formControlName="city">
     </mat-form-field>
     &nbsp;
@@ -91,14 +87,14 @@
       <mat-radio-button class="example-radio-button" *ngFor="let i of types" [value]="i" (click) = "onContinue()">{{i}}</mat-radio-button>
     </mat-radio-group>
   </div>
-  <button type="submit" class="btn btn-primary btn-sm" style="margin-left: 60%;"[disabled] ="!continue"  >CONTINUE</button><br><br>
+  <button type="submit" class="btn btn-primary btn-sm order" [disabled] ="!continue"  >CONTINUE</button><br><br>
 </form>
 </div>
 </div>
 
 <div class="container"><br>
 <div style="margin-left: 20px;">
-  <h1>Order Summary</h1>
+  <h1 class="sub-head">ORDER SUMMARY</h1>
   <div *ngIf="checkout">
     <div *ngFor = "let item of carts">
       <div style="margin-left: 20px;"><br>

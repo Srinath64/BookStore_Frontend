@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { HomeComponent } from './component/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
+import { FeedbackComponent } from './component/feedback/feedback.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CartComponent } from './component/cart/cart.component';
     LoginComponent,
     VerificationComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

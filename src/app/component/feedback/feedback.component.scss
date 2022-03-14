@@ -1,0 +1,78 @@
+.navbar {
+    width: 100%;
+    background-color: #A03037;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: emoji;
+  }
+
+.logo-content{
+/* margin-top: 117px;
+margin-left: 599px; */
+width: 170px;
+height: 225px;
+background-image: url("/assets/Group 4132.svg");
+opacity: 1;
+margin-left: 30%;
+}
+.main-content{
+    margin-top: 50px;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+.summary{
+  margin-left: 48%;
+  width: 348px;
+  height: 66px;
+  text-align: center;
+  color: #333232;
+  opacity: 1;
+  font-family: emoji;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.order-head {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: emoji;
+    font-weight: 600;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 39%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+.cs{
+  background-color: #3371B5;
+  color: white;
+  margin-left: 26%;
+  width: 20%;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid;
+}
