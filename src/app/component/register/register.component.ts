@@ -25,6 +25,11 @@ export class RegisterComponent implements OnInit {
 
   }
 
+/**
+ * This function is called when the user clicks on the submit button. 
+ * It takes the form values and sends them to the userService.register function. 
+ * If the user is successfully registered, the user is redirected to the verification page
+ */
   onSubmit(){
     console.log("value() ",this.registerForm.value)
     this.userService.register(this.registerForm.value).subscribe(data =>{

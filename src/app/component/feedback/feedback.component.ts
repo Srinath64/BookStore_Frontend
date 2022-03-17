@@ -11,6 +11,10 @@ export class FeedbackComponent implements OnInit {
   order_id: any;
   constructor( private route:ActivatedRoute) { }
 
+/**
+ * The ngOnInit() function is called after the constructor and after the first ngOnChanges() function. 
+ * a good place to put initialization logic
+ */
   ngOnInit(): void {
     this.order_id =this.route.snapshot.paramMap.get("order_id") || "";
 

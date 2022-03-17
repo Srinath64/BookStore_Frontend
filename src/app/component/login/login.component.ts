@@ -28,6 +28,9 @@ export class LoginComponent implements OnInit {
     })
   }
   
+/**
+ * This function is used to login the user
+ */
   onSubmit(){
      this.userService.userLogin(this.formGroup.get("username")?.value, this.formGroup.get("password")?.value).subscribe(
       data => {
@@ -41,11 +44,17 @@ export class LoginComponent implements OnInit {
       });  
   }
 
+/* This is used to show and hide the forgot password form. */
   forgotpass = false
   onForgotPassword(){
     this.forgotpass = !this.forgotpass
   }
 
+/**
+ * This function is called when the user clicks the "Verify" button. 
+ * It calls the forgotPassword function of the userService. 
+ * The forgotPassword function takes in the username and password entered by the user.
+ */
   onVerify(){
     this.userService.forgotPassword(this.formGroup.get("username")?.value, this.formGroup.get("password")?.value)
     .subscribe(data =>{

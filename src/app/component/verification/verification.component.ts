@@ -26,6 +26,9 @@ export class VerificationComponent implements OnInit {
     })
   }
   otp = ""
+/**
+ * Verify the user's email and OTP
+ */
   verify(){
     if(this.verifyUser.valid){
      this.otp = this.verifyUser.value.d1+this.verifyUser.value.d2+this.verifyUser.value.d3+this.verifyUser.value.d4+

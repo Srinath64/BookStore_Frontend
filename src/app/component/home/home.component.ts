@@ -35,22 +35,35 @@ export class HomeComponent implements OnInit {
 
   }
 
+/**
+ * It gets all the books from the database and stores them in the books array.
+ */
   reloadData(){
     this.bookService.getAllbooks().subscribe((data:Book[]) =>{
       this.books = data;
     })
   }
  
+/**
+ * This function is used to get all the book id's from the cart
+ */
   getBookIdLIst(){
     this.cartService.getAllCartBookId(localStorage.getItem("token") || "").subscribe((data: number[]) => this.bookIdLIst = data)
   }
 
+/**
+ * It adds a book to the cart.
+ * @param {number} book_id - The id of the book that you want to add to the cart.
+ */
   addToCart(book_id: number){
     var cartDTO = {"quantity": 1, "user_id": localStorage.getItem("token"), "book_id": book_id}
     this.cartService.addToCart(cartDTO).subscribe() 
     setTimeout(() =>{this.ngOnInit()},300)
   }
 
+/**
+ * The function backToLOginPage() is used to navigate back to the login page
+ */
   backToLOginPage(){
     const token = localStorage.getItem("token");
     // if(token == null){
@@ -60,6 +73,16 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/login');
   }
 
+/**
+ * The Onsort function is a function that takes in a number and then calls the sort function in the
+ * bookService. 
+ * 
+ * The sort function in the bookService then calls the sort function in the bookService and then
+ * returns the data to the Onsort function. 
+ * 
+ * The Onsort function then sets the books property to the data returned from the sort function.
+ * @param {number} num - number
+ */
   Onsort(num:number){
       this.bookService.sort(num).subscribe(data =>{this.books = data; })
   }
