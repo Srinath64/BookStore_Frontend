@@ -13,6 +13,7 @@
     width: 17%;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s; 
+    height: 100%;
 }
 
 .card:hover {
@@ -228,6 +229,23 @@
   .dropdown:hover .dropdown-content {
       display: block;
     }
+
+.footer {
+   width: 100%;
+   background-color: #A03037;
+   color: white;
+   text-align: center;
+   height: 45px;
+   margin-top: 30px;
+}
+
+.footer-text{
+    padding: 13px 0px;
+    font-size: 15px;
+    font-family: emoji;
+}
+
+
   
   
 

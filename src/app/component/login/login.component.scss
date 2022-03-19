@@ -33,7 +33,7 @@
 }
 
 .container{
-  margin-top: 11%;
+  margin-top: 8%;
   width: 60%;
   border: #A03037 solid 1px;
   border-radius: 10px;
@@ -80,4 +80,19 @@ body {
   text-decoration: none;
   font-size: 25px;
   font-family: emoji;
+}
+
+.footer {
+  width: 100%;
+  background-color: #A03037;
+  color: white;
+  text-align: center;
+  height: 45px;
+  margin-top: 115px;
+}
+
+.footer-text{
+   padding: 13px 0px;
+   font-size: 15px;
+   font-family: emoji;
 }
