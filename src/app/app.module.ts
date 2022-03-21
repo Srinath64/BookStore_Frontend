@@ -21,6 +21,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { HomeComponent } from './component/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
 import { FeedbackComponent } from './component/feedback/feedback.component';
+import { WelcomeComponent } from './component/welcome/welcome.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FeedbackComponent } from './component/feedback/feedback.component';
     VerificationComponent,
     HomeComponent,
     CartComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
