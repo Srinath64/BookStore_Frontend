@@ -3,9 +3,13 @@
     <div class="navbar">
         <img src="/assets/education.svg" style="margin-left: 30px;">
         <a class="active" href="#">BOOK STORE</a>
-        <i class="fa cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active">&#xf07a;</i>
-        <span class='badge badge-warning' id='lblCartCount'>{{bookIdLIst.length}}</span>
-        <i class="fa fa-sign-out logout" aria-hidden="true" (click)="backToLOginPage()"></i>
+        <div style="margin-left: 70%;">
+          <i class="fa fa-heart wishicon" [routerLink]="['/wishlist']"></i>
+          <span class='badge badge-warning' id='lblWishlistCount'>{{ListofBooks.length}}</span>
+          <i class="fa cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active">&#xf07a;</i>
+          <span class='badge badge-warning' id='lblCartCount'>{{bookIdLIst.length}}</span>
+          <i class="fa fa-sign-out logout" aria-hidden="true" (click)="backToLOginPage()"></i>
+        </div>
     </div>
 </header> 
 
@@ -13,16 +17,6 @@
   <div class="header">
     <label class="header-text">Books</label ><br>
     <span class="header-total">({{books.length}} Items)</span>
-    <!-- <div class="dropdown">
-      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sort by relevance
-      </button>
-      <div aria-labelledby="dropdownMenu2">
-        <button class="sort" type="button" (click)="Onsort(1)">Price: High to Low</button>
-        <button class="sort" type="button" (click)="Onsort(2)">Price: High to Low </button>
-        <button class="sort" type="button" (click)="Onsort(3)">Newest Arival</button>
-      </div>
-    </div> -->
     <div class="dropdown">
       <button class="dropbtn">Sort By Relevance</button>
       <div class="dropdown-content">
@@ -44,10 +38,13 @@
           <ng-template #logged>
           </ng-template>
         <p class="card-price"><b>Rs. {{book.price}}</b></p>
-        
-        <div *ngIf = "!bookIdLIst.includes(book.book_id) && book.quantity != 0; else loggedOut" >
-          <button class="cart" (click) = "addToCart(book.book_id)" >ADD TO CART</button>
-          <button class="wishlist">WISHLIST</button>
+        <div class="buttons">
+          <div *ngIf = "!bookIdLIst.includes(book.book_id) && book.quantity != 0; else loggedOut" >
+            <button class="cart" (click) = "addToCart(book.book_id)" >ADD TO CART</button>
+          </div>
+          <div *ngIf = "!ListofBooks.includes(book.book_id) && book.quantity != 0; else loggedOut">
+            <button class="wishlist" (click) = "addToWishList(book.book_id)">WISHLIST</button>
+          </div>
         </div>
         <ng-template #loggedOut>
           <button *ngIf="book.quantity != 0;" class="card-link btn btn-primary btn-sm cart">ADDED TO BAG</button>

@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { BookService } from 'src/app/service/book.service';
 import { CartService } from 'src/app/service/cart.service';
 import { OrderService } from 'src/app/service/order.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -22,7 +23,11 @@ export class CartComponent implements OnInit {
  
 
   carts!:any;
-  constructor(private bookService: BookService, private cartService: CartService, private formBuilder: FormBuilder, private orderService: OrderService) {}
+  constructor(private bookService: BookService,
+              private cartService: CartService,
+              private formBuilder: FormBuilder,
+              private orderService: OrderService,
+              private snackBar: MatSnackBar) {}
   
   token = localStorage.getItem("token") || "";
   
@@ -92,6 +97,10 @@ export class CartComponent implements OnInit {
  */
   onRemove(cart_id: number){
     this.cartService.removeFromCart(cart_id).subscribe(data => this.onReload());
+    this.snackBar.open('Book Removed from Cart!', 'Dismiss', {
+      duration: 4000,
+      verticalPosition: 'top'
+    });
   }
 
   custDetails = false;

@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header>
+  <div class="navbar">
+      <img src="/assets/education.svg" style="margin-left: 30px;">
+      <a class="active" href="#">BOOK STORE</a>
+    </div>
+</header>
+<h1 class="cart-head">MyWishList({{ListofBooks.length}})</h1>
+<div class="container">
+  <div *ngFor = "let item of wishlists"><br>
+    <div class="main-content">
+      <div class="logo-d">
+        <img class="logo" src = {{item.book.logo}}>
+      </div>
+      <div class="content">
+        <span class="book-name">{{item.book.name}}</span>
+        <h6 class="book-author">{{item.book.author}}</h6>
+        <p class="book-price">Rs.{{item.book.price}}</p>
+      </div>
+      <div class="remove">
+        <!-- <a (click) = "onRemove(item.wishlist_id)">Remove</a> -->
+        <i class="fa fa-trash" (click) = "onRemove(item.wishlist_id)"></i>
+      </div>
+    </div>
+  </div>
+</div>

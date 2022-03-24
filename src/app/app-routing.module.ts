@@ -7,6 +7,7 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { VerificationComponent } from './component/verification/verification.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'welcome', pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   {path: 'verification/:email_id', component: VerificationComponent},
   {path: 'feedback/:order_id', component: FeedbackComponent},
-  { path: 'welcome', component: WelcomeComponent }
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'wishlist', component: WishlistComponent}
 ];
 
 @NgModule({

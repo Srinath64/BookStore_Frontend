@@ -12,7 +12,7 @@ export class CartService {
 /**
  * It adds an item to the cart.
  * @param {Object} cart - Object
- * @returns An Observable of type Object.
+ * @returns An Observable of type Object. 
  */
   addToCart(cart:Object): Observable<Object>{
     return this.http.post(`http://localhost:8080/cart/add`, cart)

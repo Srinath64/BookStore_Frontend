@@ -1,0 +1,78 @@
+.navbar {
+    width: 100%;
+    background-color: #A03037;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: emoji;
+  }
+
+  .container{
+    margin-top: 10px;
+    width: 50%;
+    margin-left: 25%;
+ }
+
+ .main-content{
+     display: flex;
+     flex-wrap: wrap;
+     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+     padding: 20px;
+ }
+
+ .logo{
+    width: 100px;
+    height: 135px;
+
+ }
+ .cart-head{
+  text-align: center;
+  font-family: emoji;
+  font-weight: 600;
+  color: #A03037;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.book-name{
+  font-family: emoji;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.book-author{
+  font-family: emoji;
+  font-size: 13px;
+}
+
+.book-price{
+  font-family: emoji;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.remove{
+  cursor: pointer;
+  margin-top: 8%;
+  font-size: 25px;
+  color: #A03037;
+}
+
+.content{
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 75%;
+}
+
+.snack{
+  background-color: #A03037;
+  color: white;
+}
